@@ -1,0 +1,50 @@
+###
+POST http://localhost:3000/api/v3/series HTTP/1.1
+Content-Type: application/json
+{
+
+  "serie": "The Big Bang Theory",
+  "number_seasons": 12,
+  "original_lenguage": "English",
+  "features_seasons": {
+    "season_number": 1,
+    "season_name": "First Season",
+    "premier_date": "2007-05-19",
+    "cast": ["Jhonny_Galecki", "Jim_Pearsons","Kaley_Cuoco"],
+    "episodes": {
+      "episode_name": "Pilot",
+      "time_duration": 25
+    }
+  }
+}
+
+###
+GET http://localhost:3000/api/v3/series HTTP/1.1
+
+###
+GET http://localhost:3000/api/v3/series/seriesId HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/actors/Jhonny_Galecki HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/series/Premier/20007-05-19 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/series/seriesId HTTP/1.1
+Content-Type: application/json
+{
+ "features_seasons": {
+    "season_number": 2,
+    "season_name": "Second Season",
+    "premier_date": "2008-09-22",
+    "cast": ["Jhonny_Galecki", "Jim_Pearsons","Kaley_Cuoco","Simon_Helberg","Kunal_Nayyar"],
+    "episodes": {
+      "episode_name": "The Bad Fish Paradigm",
+      "time_duration": 25
+    }
+  }
+}
+
+###
+DELETE http://localhost:3000/api/v1/series/seriesId HTTP/1.1
