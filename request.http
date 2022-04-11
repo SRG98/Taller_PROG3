@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3000/api/v3/series HTTP/1.1
+POST http://localhost:3000/api/v1/players/ HTTP/1.1
 Content-Type: application/json
 {
 
@@ -19,19 +19,19 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/api/v3/series HTTP/1.1
+GET http://localhost:3000/api/v2/series HTTP/1.1
 
 ###
-GET http://localhost:3000/api/v3/series/seriesId HTTP/1.1
+GET http://localhost:3000/api/v2/series/seriesId HTTP/1.1
 
 ###
-GET http://localhost:3000/api/v1/actors/Jhonny_Galecki HTTP/1.1
+GET http://localhost:3000/api/v2/actors/Jhonny_Galecki HTTP/1.1
 
 ###
-GET http://localhost:3000/api/v1/series/Premier/20007-05-19 HTTP/1.1
+GET http://localhost:3000/api/v2/series/Premier/20007-05-19 HTTP/1.1
 
 ###
-PUT http://localhost:3000/api/v1/series/seriesId HTTP/1.1
+PUT http://localhost:3000/api/v2/series/seriesId HTTP/1.1
 Content-Type: application/json
 {
  "features_seasons": {
@@ -47,4 +47,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/v1/series/seriesId HTTP/1.1
+DELETE http://localhost:3000/api/v2/series/seriesId HTTP/1.1
